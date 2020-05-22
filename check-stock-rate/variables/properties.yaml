@@ -1,0 +1,19 @@
+CURRENCY: "€"
+AUMANN:
+   url: https://kurse.boerse.ard.de/ard/kurse_einzelkurs_uebersicht.htn?i=13093914
+   title: AUMANN AG INHABER-AKTIEN O.N.
+   xpath_current_value: //*[@id="vwd_content"]/div[@class="einzelkurs_header"]//span[@title="aktueller Wert"]
+   check_loss: true
+   threshold_loss:
+     - threshold: 7.0
+       order: 'Check news, but probably keep everything'
+#     - threshold: 13.0
+#       order: 'Check news, but probably keep everything'
+   check_win: true
+   threshold_win:
+     - threshold: 25.9
+       order: 'Sell 30 pieces'
+     - threshold: 35.5
+       order: 'Sell 25 pieces'
+     - threshold: 39.9
+       order: 'Sell all'

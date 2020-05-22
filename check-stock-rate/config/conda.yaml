@@ -1,0 +1,10 @@
+channels:
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.7.5
+  - pip
+  - pip:
+    - pyyaml>=5.1
+    - robotframework>=3.2,<3.3
+    - robotframework-seleniumlibrary>=4
