@@ -6,12 +6,12 @@ Suite Teardown    Close Browser
 Variables    ../variables/properties.yaml
 
 *** Variables ***
-${stock}    ${EMPTY}
+&{stock}    &{EMPTY}
 
 
 *** Tasks ***
 Check Stock from Aumann
-    [Setup]    Prepare environment for ${AUMANN}
+    [Setup]    Prepare environment for AUMANN
     ${stock_rate}   Get stock rate
     Validate lower threshold for rate '${stock_rate}'
     Validate upper threshold for rate '${stock_rate}'
@@ -19,8 +19,8 @@ Check Stock from Aumann
 
 *** Keywords ***
 Prepare environment for ${runtime_stock}
-    log    ${runtime_stock}
-    Set Global Variable    ${stock}    ${runtime_stock}
+    log    ${${runtime_stock}}
+    Set Global Variable    &{stock}    &{${runtime_stock}}
 
 Open website for stock rates
     Go to    ${stock}[url]
