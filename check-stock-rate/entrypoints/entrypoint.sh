@@ -1,7 +1,5 @@
 #!/bin/bash -ex
 
-pip install pyyaml
-
 pip list
 
 # Executes all tasks defined in the "tasks" directory.
