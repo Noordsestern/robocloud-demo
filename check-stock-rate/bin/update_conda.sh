@@ -1,0 +1,1 @@
+conda env update --file check-stock-rate/config/conda.yaml --prune
